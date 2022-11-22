@@ -23,10 +23,3 @@ fun CoinDto.toCoin(): Coin = Coin(
     symbol = symbol
 )
 
-fun List<CoinDto>.toCoinList():List<Coin> {
-     val coinList: MutableList<Coin> = mutableListOf()
-    this.forEach {
-        coinList.add(it.toCoin())
-    }
-    return coinList
-}
