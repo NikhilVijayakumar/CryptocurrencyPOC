@@ -9,7 +9,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CryptocurrencyApp">
         <activity
-            android:name="com.nikhil.cryptocurrency.MainActivity"
+            android:name="com.nikhil.presentation.MainActivity"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.CryptocurrencyApp.NoActionBar">
