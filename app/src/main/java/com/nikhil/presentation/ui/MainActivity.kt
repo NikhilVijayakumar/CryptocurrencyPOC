@@ -1,4 +1,4 @@
-package com.nikhil.presentation
+package com.nikhil.presentation.ui
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
