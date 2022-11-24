@@ -1,4 +1,4 @@
-package com.nikhil.presentation.ui.theme
+package com.nikhil.cryptocurrency.presentation.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

@@ -8,6 +8,8 @@ import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
+import okhttp3.OkHttpClient
+import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import javax.inject.Singleton
@@ -18,12 +20,18 @@ object AppModule {
 
     @Singleton
     @Provides
-    fun providePaprikaAPI():CoinPaparikaApi = Retrofit
-        .Builder()
-        .baseUrl(Constants.BASE_URL)
-        .addConverterFactory(GsonConverterFactory.create())
-        .build()
-        .create(CoinPaparikaApi::class.java)
+    fun providePaprikaAPI():CoinPaparikaApi {
+        val interceptor:HttpLoggingInterceptor = HttpLoggingInterceptor()
+        interceptor.setLevel(HttpLoggingInterceptor.Level.BODY);
+        val client:OkHttpClient  = OkHttpClient.Builder().addInterceptor(interceptor).build()
+       return Retrofit
+            .Builder()
+           .client(client)
+            .baseUrl(Constants.BASE_URL)
+            .addConverterFactory(GsonConverterFactory.create())
+            .build()
+            .create(CoinPaparikaApi::class.java)
+    }
 
     @Singleton
     @Provides

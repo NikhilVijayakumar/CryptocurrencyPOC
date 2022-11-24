@@ -1,4 +1,4 @@
-package com.nikhil.presentation.ui.coin.details
+package com.nikhil.cryptocurrency.presentation.ui.coin.details
 
 import androidx.compose.runtime.State
 import androidx.compose.runtime.mutableStateOf

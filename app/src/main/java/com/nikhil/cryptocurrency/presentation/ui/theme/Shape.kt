@@ -1,4 +1,4 @@
-package com.nikhil.presentation.ui.theme
+package com.nikhil.cryptocurrency.presentation.ui.theme
 
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Shapes
